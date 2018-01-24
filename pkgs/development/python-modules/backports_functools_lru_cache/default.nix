@@ -2,6 +2,7 @@
 , buildPythonPackage
 , fetchPypi
 , setuptools_scm
+, pythonAtLeast
 }:
 
 buildPythonPackage rec {
@@ -15,6 +16,9 @@ buildPythonPackage rec {
 
   buildInputs = [ setuptools_scm ];
   doCheck = false; # No proper test
+
+  # Backport of functools.lru_cache from Python 3.3
+  disabled = pythonAtLeast "3.3";
 
   meta = {
     description = "Backport of functools.lru_cache";
