@@ -1034,6 +1034,9 @@ in {
       sha256 = "1wndipik52cyqy0677zdgp90i435pmvwd89cz98lm7ri0y3xjajh";
     };
 
+    # Backport of Python 3.5 function.
+    disabled = pythonAtLeast "3.5";
+
     meta = {
       description = "The Secure Sockets layer is only actually *secure*";
       homepage = https://bitbucket.org/brandon/backports.ssl_match_hostname;
