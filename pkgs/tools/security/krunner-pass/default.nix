@@ -6,7 +6,7 @@
 }:
 let
   pname = "krunner-pass";
-  version = "v1.3.0";
+  version = "1.3.0";
 in
 mkDerivation rec {
   name = "${pname}-${version}";
@@ -14,7 +14,7 @@ mkDerivation rec {
   src = fetchFromGitHub {
     owner = "akermu";
     repo = "krunner-pass";
-    rev = "a541cf126689fa27665248aa1d7f934fc551a0c7";
+    rev = "v1.3.0";
     sha256 = "032fs2174ls545kjixbhzyd65wgxkw4s5vg8b20irc5c9ak3pxm0";
   };
 
