@@ -8214,6 +8214,8 @@ with pkgs;
 
   swftools = callPackage ../tools/video/swftools { };
 
+  go-task =  callPackage ../development/tools/build-managers/go-task { };
+
   tcptrack = callPackage ../development/tools/misc/tcptrack { };
 
   teensyduino = arduino-core.override { withGui = true; withTeensyduino = true; };
